@@ -1,5 +1,12 @@
 package pro.sky.calculator.service;
 
-public interface HelloService {
-String hello();
+import org.springframework.stereotype.Service;
+
+@Service
+public class HelloService {
+
+    public String hello(){
+        return "Добро пожаловать в калькулятор";
+    }
+
 }
