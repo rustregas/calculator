@@ -40,10 +40,6 @@ public class CalculatorController {
 
     @GetMapping(path = "/divide")
     public String calculateDivide(@RequestParam("num1") int num1, @RequestParam("num2") int num2){
-        if(num2 == 0) {
-            return "На ноль нельзя делить";
-        } else {
             return num1 + " / " + num2 + " = " + calculateService.calculateDivide(num1, num2);
-        }
     }
 }

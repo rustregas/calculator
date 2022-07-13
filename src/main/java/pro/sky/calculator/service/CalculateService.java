@@ -19,6 +19,10 @@ public class CalculateService {
     }
 
     public float calculateDivide(int num1, int num2) {
-        return ((float) num1 / num2);
+        if(num2 == 0) {
+            throw new IllegalArgumentException("На ноль нельзя делить");
+        } else {
+            return ((float) num1 / num2);
+        }
     }
 }
